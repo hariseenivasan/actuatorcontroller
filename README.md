@@ -29,9 +29,10 @@ Start both service_node.py and test_room1.py
 Now run test_service.py to see test_room1 dumping the openess level depending on the random values sent to the service_node.
 
 # Future Work
-Consolidate the test file into one.
-Design Queue based service_node.py for synchronized subscription or message publishing.
-Left out on the actual algorithm for climate control, this depends on various other factors such as heater/cooler's rate for a given volume of room etc.
-Thus, add other factors for calculation and modify the json inorder to make the service much more reliable.
-
-
+1. Consolidate the test file into one.
+2. Design Queue based service_node.py for synchronized subscription or message publishing.
+3. Left out on the actual algorithm for climate control, this depends on various other factors such as heater/cooler's rate for a given volume of room etc.
+4. Thus, add other factors for calculation and modify the json inorder to make the service much more reliable.
+5. Decouple on_message as generic serializable functions to be able to be passed into a queue design. (Handles multiple sensor data in a very optimized way)
+6. Create a lambda to manage micro fucntions to handle various json.
+7. Improve scalable design to monitor various sensors in rooms using a map file or map settings.
